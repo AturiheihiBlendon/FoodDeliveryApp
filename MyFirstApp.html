@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <head>
+    <style>
+        tr{
+            background-color: grey;
+            color: black;
+            text-align: center;
+        }
+        dt{
+            font-weight: bold;
+            background-color: gray;
+            color: black;
+        }
+    </style>
     <script>
         function Placeorder(){
+            document.getElementById("order summary").style.display="block";
             Uname=document.getElementById("name");
             mobile=document.getElementById("number");
             adress=document.getElementById("home");
@@ -46,7 +59,7 @@
             document.getElementById("lbAddress").innerHTML=adress.value;
             document.getElementById("lbMeal").innerHTML=meal_name;
             document.getElementById("lbAdon").innerHTML=Ad_on_name;
-            document.getElementById("lbAmount").innerHTML=meal_cost;
+            document.getElementById("lbAmount").innerHTML="$"+meal_cost;
 
             }
     </script>
@@ -55,7 +68,7 @@
 <body>
     <div>
         <font size ="4">
-            <table id="orderform" width="800" align="center" border="2" cellpadding="4" cellspacing="4">
+            <table id="orderform" style="display:block" width="375" align="center" border="2" cellpadding="4" cellspacing="4">
                 <tr>
                     <td>
                         <img src="images/rolex.jpg" width="100" height="100">
@@ -125,7 +138,7 @@
                     </td>
                 </tr>
             </table>
-            <dl id="order summary" style="display:block">
+            <dl id="order summary" style="display:none">
                 <h2>Order Summary</h2>
                 <dt>Customer's name</dt>
                 <dd id="lbName"></dd>
