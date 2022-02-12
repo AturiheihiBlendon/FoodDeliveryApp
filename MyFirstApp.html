@@ -2,9 +2,44 @@
 <head>
     <script>
         function Placeorder(){
-            Uname=document.getElementById("name")
-            mobile=document.getElementById("number")
+            Uname=document.getElementById("name");
+            mobile=document.getElementById("number");
+            burger=document.getElementById("optBurger");
+            rollex=document.getElementById("optRollex");
+            pizza=document.getElementById("optPizza");
+            chicken=document.getElementById("optChicken");
+            coke=document.getElementById("optCoke");
+
+            var meal_cost=0;
+            var Ad_on_cost=0;
+            var meal_name="";
+            var Ad_on_name="";
+
+            if(burger.checked){
+                meal_cost=13;
+                meal_name=burger.value;
+            }
+
+            if(rollex.checked){
+                meal_cost=13;
+                meal_name=rollex.value;
+            }
+
+            if(pizza.checked){
+                meal_cost=13;
+                meal_name=pizza.value;
+            }
+
+            if(chicken.checked){
+                meal_cost=13;
+                meal_name=chicken.value;
+            }
             
+            if(coke.checked){
+                Ad_on_cost=1+meal_cost;
+                Ad_on_name=coke.value+"<br>";
+            }
+
             }
     </script>
 
@@ -28,7 +63,7 @@
                     <td><input type="text" id="name"></td>
                 </tr>
                 <tr>
-                    <td>Mobile number</td>
+                    <td>Customer's contact</td>
                     <td><input type="number" id="number"></td>
                 </tr>
 
@@ -50,21 +85,21 @@
                 <tr>
                     <td>
                         <img src="images/rolex.jpg" height="200"><br>
-                        <input type="radio" id="optRollex" name="meal" value="omgBurger">UgaRoll  (&#x24;6)
+                        <input type="radio" id="optRollex" name="meal" value="Rollex">UgaRoll  (&#x24;6)
                     </td>
                 </tr>
 
                 <tr>
                     <td>
                         <img src="images/pizza.jpg"><br>
-                        <input type="radio" id="optPizza" name="meal" value="omgBurger">Pizza Hut  (&#x24;12)
+                        <input type="radio" id="optPizza" name="meal" value="Pizza-Hut">Pizza Hut  (&#x24;12)
                     </td>
                 </tr>
 
                 <tr>
                     <td>
                         <img src="images/chicken.jpg"><br>
-                        <input type="radio" id="optChicken" name="meal" value="omgBurger">Streetwise Chicken  (&#x24;10)
+                        <input type="radio" id="optChicken" name="meal" value="Streetwise-Chicken">Streetwise Chicken  (&#x24;10)
                     </td>
                 </tr>
 
@@ -75,7 +110,7 @@
                 <tr>
                     <td>
                         <img src="images/coke.jpg" height="200"><br>
-                        <input type="checkbox" id="optCoke" value="omgBurger">350ml coke
+                        <input type="checkbox" id="optCoke" value="CocaCola">350ml coke
                     </td>
                 </tr>
 
