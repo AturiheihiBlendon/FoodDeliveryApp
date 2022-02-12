@@ -37,6 +37,7 @@
             }
             
             if(coke.checked){
+                Ad_on_cost=1;
                 meal_cost+=Ad_on_cost;
                 meal_name=coke.value+"<br>";
             }
@@ -57,7 +58,7 @@
             <table id="orderform" width="800" align="center" border="2" cellpadding="4" cellspacing="4">
                 <tr>
                     <td>
-                        <img src="images/rolex.jpg" width="1000" height="400">
+                        <img src="images/rolex.jpg" width="100" height="100">
                     </td>
                 </tr>
 
@@ -80,32 +81,28 @@
                 </tr>
 
                 <tr>
-                    <td align="center"><b>Select your choices and we serve you</b></td>
+                    <td colspan="2" align="center"><b>Select your choices and we serve you</b></td>
                 </tr>
                 <tr>
                     <td>
-                        <img src="images/burger.jpg"><br>
+                        <img src="images/burger.jpg" width="100" height="100"><br>
                         <input type="radio" id="optBurger" name="meal" value="omgBurger">Burger  (&#x24;13)
                     </td>
-                </tr>
-
-                <tr>
+                
                     <td>
-                        <img src="images/rolex.jpg" height="200"><br>
+                        <img src="images/rolex.jpg" width="100" height="100"><br>
                         <input type="radio" id="optRollex" name="meal" value="Rollex">UgaRoll  (&#x24;6)
                     </td>
-                </tr>
-
-                <tr>
+                    <tr>
                     <td>
-                        <img src="images/pizza.jpg"><br>
+                        <img src="images/pizza.jpg" width="100" height="100">
+                        <br>
                         <input type="radio" id="optPizza" name="meal" value="Pizza-Hut">Pizza Hut  (&#x24;12)
                     </td>
-                </tr>
-
-                <tr>
+                
                     <td>
-                        <img src="images/chicken.jpg"><br>
+                        <img src="images/chicken.jpg" width="100" height="100">
+                        <br>
                         <input type="radio" id="optChicken" name="meal" value="Streetwise-Chicken">Streetwise Chicken  (&#x24;10)
                     </td>
                 </tr>
@@ -115,19 +112,20 @@
                 </tr>
 
                 <tr>
-                    <td>
-                        <img src="images/coke.jpg" height="200"><br>
+                    <td colspan="2">
+                        <img src="images/coke.jpg" width="100" height="100">
+                        <br>
                         <input type="checkbox" id="optCoke" value="CocaCola">350ml coke  (&#x24;1)
                     </td>
                 </tr>
 
                 <tr>
-                    <td align="center">
+                    <td align="center" colspan="2">
                         <input type="button" value="Place order" onclick="Placeorder()">
                     </td>
                 </tr>
             </table>
-            <dl id="order summary" style="display:block">
+            <dl id="order summary" style="display:none">
                 <h2>Order Summary</h2>
                 <dt>Customer's name</dt>
                 <dd id="lbName"></dd>
